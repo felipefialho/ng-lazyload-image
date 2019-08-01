@@ -3,18 +3,7 @@
   "name": "ng-lazyload-image",
   "version": "6.0.0",
   "description": "Lazy image loader for Angular > v2",
-  "main": "index.js",
-  "scripts": {
-    "preversion": "npm run test && npm run build",
-    "postversion": "git push && git push --tags",
-    "test": "jest",
-    "build": "rm -rf dist && ng-packagr -p package.json"
-  },
-  "ngPackage": {
-    "lib": {
-      "entryFile": "index.ts"
-    }
-  },
+  "main": "bundles/ng-lazyload-image.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tjoskar/ng-lazyload-image.git"
@@ -34,7 +23,9 @@
     "@angular/core": ">=7.0.0",
     "rxjs": ">=6.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
   "devDependencies": {
     "@angular/compiler": "^8.0.3",
     "@angular/common": "^8.0.3",
@@ -89,5 +80,14 @@
       "children-crossing",
       "iphone"
     ]
-  }
+  },
+  "module": "fesm5/ng-lazyload-image.js",
+  "es2015": "fesm2015/ng-lazyload-image.js",
+  "esm5": "esm5/ng-lazyload-image.js",
+  "esm2015": "esm2015/ng-lazyload-image.js",
+  "fesm5": "fesm5/ng-lazyload-image.js",
+  "fesm2015": "fesm2015/ng-lazyload-image.js",
+  "typings": "ng-lazyload-image.d.ts",
+  "metadata": "ng-lazyload-image.metadata.json",
+  "sideEffects": false
 }
